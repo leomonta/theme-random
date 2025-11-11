@@ -16,24 +16,15 @@ function fish_prompt
 			break
 			end
 		end
-        end
+	end
 
 
-        ## enable the new theme
+	## enable the new theme
 	## use high level functions for compatibility
 	omf theme "$theme_to_enable"
 	
-
-	echo  (omf::em)"  ✔ $theme_to_enable successfully enabled.  "(omf::off)
-	
-
 	## force omf to enable a new theme when fish source dotfiles (i.e. omf reload)
 	echo "random" > "$OMF_CONFIG"/theme
-
-	## no need for a fake prompt
-	## ask fish shell to press '\n' / return for you, making the prompt appear automatically
-	commandline -f execute
-
 
 ## function fish_prompt end	
 end
